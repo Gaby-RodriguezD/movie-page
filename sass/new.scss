@@ -1,0 +1,81 @@
+$color1: rgb(170, 3, 3);
+$color2: #979797;
+$basic-num: 10px;
+$i: "img";
+$c: center;
+$g: "gallery";
+
+
+
+/*Gallery*/
+
+.#{$g} {
+    display: flex;
+    flex-direction: row;
+    gap: $basic-num - 2;
+    justify-content: space-evenly;
+    align-items: $c;
+    padding: $basic-num +10;
+}
+
+.#{$g} .card-container {
+    position: relative;
+    width: 240px;
+    height: 280px;
+}
+
+.#{$g} .#{$i}-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius: $basic-num +10;
+    box-shadow: 2px 2px 30px rgba(128, 128, 128, 0.747);
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+}
+
+
+.#{$g} .#{$i}-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: coral;
+    border-radius: $basic-num;
+
+    #{$i} {
+        width: 100%;
+        height: 100%;
+        border-radius: $basic-num;
+        object-fit: cover;
+        object-position: $c;
+    }
+}
+
+.#{$g} .#{$i}-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: transparent;
+    color: $color2;
+    padding: $basic-num + 10;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: $c;
+    align-items: $c;
+    text-align: $c;
+
+    p {
+        font-size: $basic-num + 5;
+        border-bottom: 1px solid $color1;
+        padding-bottom: $basic-num;
+        border-top: 1px solid $color1;
+        padding-top: $basic-num;
+    }
+}

@@ -1,0 +1,69 @@
+/*Gallery*/
+.gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery .card-container {
+  position: relative;
+  width: 240px;
+  height: 280px;
+}
+
+.gallery .img-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(128, 128, 128, 0.747);
+}
+.gallery .img-card:hover {
+  transform: rotateY(180deg);
+}
+
+.gallery .img-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: coral;
+  border-radius: 10px;
+}
+.gallery .img-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.gallery .img-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: transparent;
+  color: #979797;
+  padding: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.gallery .img-back p {
+  font-size: 15px;
+  border-bottom: 1px solid rgb(170, 3, 3);
+  padding-bottom: 10px;
+  border-top: 1px solid rgb(170, 3, 3);
+  padding-top: 10px;
+}/*# sourceMappingURL=new.css.map */
