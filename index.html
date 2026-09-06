@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>Pagina de Peliculas</title>
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MovieTime</a>
+        <ul class="nave">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="greatest.html">Preferido</a></li>
+            <li><a href="nightmare.html">Spooky</a></li>
+            <li><a href="santa.html">Festivo</a></li>
+            <li><a href="mario.html">Gaming</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="look-for" aria-hidden="true"></i>
+        </div>
+
+        </header>
+    
+        <section class="home">
+            <img class="image-slide active" src="./img/darkgreat-background.png" alt="">
+            <img class="image-slide" src="./img/darknightmare-background.png" alt="">
+            <img class="image-slide" src="./img/darkmiracle-background.png" alt="">
+            <img class="image-slide" src="./img/darkmario-background.png" alt="">
+            <div class="contenido active">
+                <h1><img src="./img/The_Greatest_Showman.png" alt=""><span></span></h1>
+                <p>"Lo que ha esperado hasta mañana comienza esta noche"</p>
+                <a href="greatest.html">Más Info</a>
+            </div>
+
+            <div class="contenido">
+                <h1><img src="./img/nightmare_logo.png" alt=""></h1>
+                <p>"Pesadilla antes de Navidad"</p>
+                <a href="nightmare.html">Más Info</a>
+            </div>
+
+            <div class="contenido">
+                <h1><img src="./img/miracle-logo.webp" alt=""></h1>
+                <p>"La fe es creer cosas cuando el sentido común te dice que no lo hagas."</p>
+                <a href="santa.html">Más Info</a>
+            </div>
+
+            <div class="contenido">
+                <h1><img src="./img/The_Super_Mario_Bros._Movie_logo.png" alt=""></h1>
+                <p>"¡Mamma Mia!"</p>
+                <a href="mario.html">Más Info</a>
+            </div>
+
+            <div class="slide-nav">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
+        </section>
+
+
+        <script>
+            //Javascript navigation slider
+            const btns= document.querySelectorAll(".nav-btn");
+            const slides= document.querySelectorAll(".image-slide");
+            const contents= document.querySelectorAll(".contenido");
+
+            var sliderNav= function(manual){
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                })
+
+                contents.forEach((content) =>{
+                    content.classList.remove("active");
+                })
+
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add("active");
+            }
+
+            btns.forEach((btn, i)=> {
+                btn.addEventListener("click", () => {
+                    sliderNav(i);
+                });
+            });
+        </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
