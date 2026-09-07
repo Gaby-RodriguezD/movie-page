@@ -14,7 +14,7 @@ Demo Link: https://gaby-rodriguezd.github.io/movie-page/
 * Methodology: Responsive web design with fluid layout components.
 
   ## Structure:
-  *| index.html #Main movie catalog display.
-  *| css.html #Main display styling components.
-  *| specific-movie.html #An inidivdual document for every movie that carries all it's information.
-  *| specific-movie.css #Every movie specific styling that help implement it's interactive components.
+  * | index.html #Main movie catalog display.
+  * | css.html #Main display styling components.
+  * | specific-movie.html #An inidivdual document for every movie that carries all it's information.
+  * | specific-movie.css #Every movie specific styling that help implement it's interactive components.
